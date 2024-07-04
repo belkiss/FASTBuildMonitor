@@ -1,0 +1,18 @@
+---
+version: 2
+updates:
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Maintain dependencies for NuGet
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: daily
+    ignore:
+      # ignore all updates since it will most certainly break the plugin compatibility with old VS versions
+      - dependency-name: "Microsoft.VisualStudio.SDK"
