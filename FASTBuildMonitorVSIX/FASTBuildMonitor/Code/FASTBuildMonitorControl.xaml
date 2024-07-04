@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:my="clr-namespace:FASTBuildMonitor"
+             AllowDrop="True" Drop="UserControl_Drop"
              mc:Ignorable="d"
              d:DesignHeight="440" d:DesignWidth="800"
              Name="MyToolWindow">

@@ -2239,15 +2239,30 @@ namespace FASTBuildMonitor
 
         private int _lastProcessedPosition = 0;
 
+        private string _path = null;
+        private void ChangePath(string path)
+        {
+            _path = path;
+            _fileStream = null;
+        }
+
         private void ProcessInputFileStream()
         {
             if (_fileStream == null)
             {
-                string path = System.IO.Path.GetTempPath() + @"\FastBuild\FastBuildLog.log";
-
-                if (!Directory.Exists(System.IO.Path.GetDirectoryName(path)))
+                string path;
+                if (_path == null)
                 {
-                    Directory.CreateDirectory(System.IO.Path.GetDirectoryName(path));
+                    path = System.IO.Path.GetTempPath() + @"\FastBuild\FastBuildLog.log";
+
+                    if (!Directory.Exists(System.IO.Path.GetDirectoryName(path)))
+                    {
+                        Directory.CreateDirectory(System.IO.Path.GetDirectoryName(path));
+                    }
+                }
+                else
+                {
+                    path = _path;
                 }
 
                 if (!File.Exists(path))
@@ -2797,6 +2812,19 @@ namespace FASTBuildMonitor
             {
                 Console.WriteLine("Exception detected... Restarting! details: " + ex.ToString());
                 ResetState();
+            }
+        }
+
+        private void UserControl_Drop(object sender, DragEventArgs e)
+        {
+            // If the DataObject contains string data, extract it.
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] fileDrops = e.Data.GetData(DataFormats.FileDrop) as string[];
+                if (fileDrops.Length == 1)
+                {
+                    ChangePath(fileDrops[0]);
+                }
             }
         }
     }
