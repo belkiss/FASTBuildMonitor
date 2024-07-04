@@ -243,6 +243,8 @@ namespace FASTBuildMonitor
             _timeBar.UpdateTheme(Theme);
             _localHost?.UpdateTheme(Theme);
 
+            _systemPerformanceGraphs.UpdateTheme(isDark);
+
             foreach (var entry in _hosts)
             {
                 var host = entry.Value;

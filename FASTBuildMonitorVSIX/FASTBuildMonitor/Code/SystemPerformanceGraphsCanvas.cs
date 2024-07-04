@@ -573,7 +573,7 @@ namespace FASTBuildMonitor
 
                         if (_selectedGraphPoint != null)
                         {
-                            TextUtils.DrawText(dc, string.Format("{0}: {1:0.00}{2}", _description, _selectedGraphPoint._value, _unitTag), SystemPerformanceGraphsCanvas._savedHorizontalViewport.X, _selectedGraphPoint._coordinates.Y, 200, false, Brushes.Black);
+                            TextUtils.DrawText(dc, string.Format("{0}: {1:0.00}{2}", _description, _selectedGraphPoint._value, _unitTag), SystemPerformanceGraphsCanvas._savedHorizontalViewport.X, _selectedGraphPoint._coordinates.Y, 250, false, _isDarkTheme ? Brushes.LightGray : Brushes.Black);
 
                             dc.DrawGeometry(Brushes.Gray, new Pen(Brushes.Gray, 1), _selectionLinesGeometry);
                         }
@@ -1004,6 +1004,11 @@ namespace FASTBuildMonitor
             _visible = visible;
         }
 
+        public void UpdateTheme(bool isDark)
+        {
+            _isDarkTheme = isDark;
+        }
+
 
         protected override void OnRender(DrawingContext dc)
         {
@@ -1138,6 +1143,8 @@ namespace FASTBuildMonitor
         static public Point _savedHorizontalViewport = new Point();
 
         static public bool _hasSelectedGraphPoint = false;
+
+        static public bool _isDarkTheme = false;
 
         Canvas _parentCanvas = null;
     }
