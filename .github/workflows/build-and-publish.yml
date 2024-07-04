@@ -88,4 +88,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: 'FASTBuildMonitorVSIX-${{ matrix.configuration }}-${{github.sha}}'
-        path: FASTBuildMonitorVSIX\FASTBuildMonitorVSIX\bin\${{ matrix.configuration }}\net472\FASTBuildMonitorVSIX.vsix
+        path: FASTBuildMonitorVSIX\FASTBuildMonitorVSIX\bin\${{ matrix.configuration }}\net472\FASTBuildMonitorVSIX*.vsix
