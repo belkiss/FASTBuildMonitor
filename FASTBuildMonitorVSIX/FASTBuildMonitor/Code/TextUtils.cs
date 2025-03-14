@@ -142,6 +142,7 @@ namespace FASTBuildMonitor
                 0,       // Bi-directional nesting level
                 false,   // isSideways
                 _cFontSize,      // pt size
+                1.0F,
                 glyphIndexes,   // glyphIndices
                 new Point(roundedX, roundedY),           // baselineOrigin
                 advanceWidths,  // advanceWidths
