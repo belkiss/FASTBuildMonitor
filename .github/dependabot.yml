@@ -10,7 +10,7 @@ updates:
 
   # Maintain dependencies for NuGet
   - package-ecosystem: "nuget"
-    directory: "/"
+    directory: "/FASTBuildMonitorVSIX"
     schedule:
       interval: "daily"
     ignore:
