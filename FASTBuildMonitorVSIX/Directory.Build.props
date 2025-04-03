@@ -3,5 +3,6 @@
     <LangVersion>8.0</LangVersion>
     <TargetFramework>net472</TargetFramework>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RollForward>LatestMajor</RollForward>
   </PropertyGroup>
 </Project>
