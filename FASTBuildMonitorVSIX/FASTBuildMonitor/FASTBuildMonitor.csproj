@@ -3,6 +3,7 @@
     <OutputType>Library</OutputType>
     <Configurations>Debug;Release;Debug Legacy;Release Legacy</Configurations>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
@@ -13,6 +14,7 @@
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="9.0.3" />
     <Content Include="Resources\race_flag.png" />
     <Content Include="Resources\Success-code.png" />
     <Content Include="Resources\Success-noncode.png" />
