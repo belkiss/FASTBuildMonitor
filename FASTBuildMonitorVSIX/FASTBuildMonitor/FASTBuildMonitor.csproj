@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <Configurations>Debug;Release;Debug Legacy;Release Legacy</Configurations>
@@ -14,7 +14,7 @@
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Resources.Extensions" Version="9.0.3" />
+    <PackageReference Include="System.Resources.Extensions" Version="9.0.4" />
     <Content Include="Resources\race_flag.png" />
     <Content Include="Resources\Success-code.png" />
     <Content Include="Resources\Success-noncode.png" />
