@@ -95,7 +95,7 @@
   </Choose>
   <ItemGroup>
     <ProjectReference Include="..\FASTBuildMonitor\FASTBuildMonitor.csproj" />
-    <PackageReference Include="Microsoft.VisualStudio.SDK.Analyzers" Version="17.7.47">
+    <PackageReference Include="Microsoft.VisualStudio.SDK.Analyzers" Version="17.7.79">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
