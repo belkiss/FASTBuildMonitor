@@ -81,13 +81,13 @@ jobs:
 
     - name: Upload Standalone build artifacts
       if: matrix.configuration == 'Debug' || matrix.configuration == 'Release'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: 'FASTBuildMonitor-${{ matrix.configuration }}-${{github.sha}}'
         path: FASTBuildMonitorVSIX\FASTBuildMonitorStandalone\bin\${{ matrix.configuration }}\net472\*
 
     - name: Upload VSIX build artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: 'FASTBuildMonitorVSIX-${{ matrix.configuration }}-${{github.sha}}'
         path: FASTBuildMonitorVSIX\FASTBuildMonitorVSIX\bin\${{ matrix.configuration }}\net472\FASTBuildMonitorVSIX*.vsix
