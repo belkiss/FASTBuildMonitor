@@ -14,7 +14,7 @@
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Resources.Extensions" Version="9.0.8" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.2" />
     <Content Include="Resources\race_flag.png" />
     <Content Include="Resources\Success-code.png" />
     <Content Include="Resources\Success-noncode.png" />
